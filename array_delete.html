@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete element from array</title>
+
+    <script>
+        let array = [12,43,56,23,54];
+        function deleteNumber() {
+            let position =parseInt(document.getElementById('position').value);
+            console.log(array);
+            for (let i = position; i<array.length-1;i++) {
+                console.log(array[i]);
+                array[i] = array[i+1]
+            }
+            array.length = array.length-1
+            console.log(array);
+        }
+        
+    </script>
+</head>
+<body>
+    <input placeholder="Enter index" type="number" id="position">
+    <button onclick="deleteNumber()">Delete number</button>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Search</title>
+    <script>
+
+        function serach () {
+            let array = [1,2,3,4,5,6];
+            let element = document.getElementById('element').value;
+            let elementFound = false;
+            let index = 0;
+            for(let i = 0; i < array.length; i++) {
+                if (element == array[i]) {
+                    elementFound = true;
+                    index = i
+                }
+            }
+            if (elementFound) {
+                console.log(`Number ${element} found at ${index} index`);
+            } else {
+                console.log("Number Not found in array");   
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <input placeholder="Enter Number" type="number" id="element">
+    <button onclick="serach()">Search Number</button>
+</body>
+</html>
