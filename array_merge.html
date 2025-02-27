@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array merge</title>
+    <script>
+        function merge() {
+            let array1 = [1,2,3];
+            let array2 = [4,5,6];          
+            let array3 = [];
+            
+            for(let i = 0; i<array1.length;i++) {
+                array3[i] = array1[i]
+            }
+            for(let j =0;j<array2.length;j++) {
+                array3[j+array1.length] = array2[j];
+            }
+            console.log('array3',array3);
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="merge()"> Merge Array</button>
+</body>
+</html>
