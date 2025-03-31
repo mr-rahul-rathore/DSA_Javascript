@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse aray using recursion</title>
+    <script>
+        let arr = [12,53,4,3,5,2,12];
+        let temp;
+        let i = 0;
+        function reverserarr(arr,start,end) {
+            console.log(arr);
+            
+            if (start <= end) {
+                temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp
+                reverserarr(arr,start+1,end-1)
+            }
+            
+        }   
+        reverserarr(arr,0,arr.length-1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
