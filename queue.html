@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in javascript</title>
+    <script>
+        let queue = [];
+        let currentSize = queue.length;
+        let maxSize = 5;
+
+        function enQueue(newval) {
+            if (currentSize >= maxSize) {
+                alert("Queue is full")
+            } else {
+                queue[currentSize] = newval;
+                currentSize++
+            }
+        }
+
+        function deQueue () {
+            if (!isEmpty()) {
+                for (let i = 0;i<currentSize;i++) {
+                    queue[i] = queue[i+1];
+                }
+                currentSize--;
+                queue.length = currentSize
+            } else {
+                alert("Queue is empty");
+            }
+        }
+
+        function display() {
+            console.log(queue);
+            
+        }
+
+        function front() {
+            if (!isEmpty()) {
+                console.log(queue[0]);
+            } else {
+                console.log("queue is empty");
+            }
+        }
+
+        function rear () {
+            if (!isEmpty()) {
+                console.log(queue[currentSize-1]);
+            } else {
+                console.log("queue is empty");
+            }
+        }
+
+        function isEmpty() {
+            if (currentSize <= 0) {
+                return true
+            } else {
+                return false;
+            }
+        }
+
+        enQueue(5);
+        enQueue(15);
+        enQueue(25);
+        enQueue(52);
+        display();
+        // deQueue();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
